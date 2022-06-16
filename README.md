@@ -15,11 +15,7 @@
 - Twitter: [@twitterhandle](https://twitter.com/AminaBuhari)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/amina-buhari/)
 
-👤 **Teshome Kurabachew**
 
-- GitHub: [@githubhandle](https://github.com/TesheMaximillan)
-- Twitter: [@twitterhandle](https://twitter.com/TesheKura)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/teshome-kurabachew-aa8067180/)
 ## 🤝 Contributing
 
 ## Show your support
