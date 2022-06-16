@@ -4,7 +4,6 @@
 
 >The project is a school library app.  In the initial step, classes to represent students and teachers were represented.
 
-
 ## Built With
 
 - Ruby 
