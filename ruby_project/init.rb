@@ -7,7 +7,7 @@ require_relative 'classes/person'
 
 person = Person.new(22, 'maximilianus')
 puts person.correct_name
-capitalizedPerson = CapitalizeDecorator.new(person)
-puts capitalizedPerson.correct_name
-capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
-puts capitalizedTrimmedPerson.correct_name
+capitalized_person = CapitalizeDecorator.new(person)
+puts capitalized_person.correct_name
+capitalized_trimmed = TrimmerDecorator.new(capitalized_person)
+puts capitalized_trimmed.correct_name
