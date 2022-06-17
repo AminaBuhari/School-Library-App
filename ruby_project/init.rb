@@ -1,6 +1,6 @@
 # Decorators in action
 
-require_relative "classes/capitalize_decorator"
+require_relative 'classes/capitalize_decorator'
 require_relative 'classes/nameable'
 require_relative 'classes/trimmer_decorator'
 require_relative 'classes/person'
