@@ -1,8 +1,8 @@
 # Decorators in action
 
-require_relative "classes/capitalizeDecorator"
+require_relative "classes/capitalize_decorator"
 require_relative 'classes/nameable'
-require_relative 'classes/trimmerDecorator'
+require_relative 'classes/trimmer_decorator'
 require_relative 'classes/person'
 
 person = Person.new(22, 'maximilianus')
