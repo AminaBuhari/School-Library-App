@@ -1,6 +1,7 @@
 # Decorators in action
 
-require_relative 'classes/student'
+require_relative 'classes/app'
+require_relative 'classes/'
 
 # person = Person.new(22, 'maximilianus')
 # puts person.correct_name
