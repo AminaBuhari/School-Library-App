@@ -4,8 +4,6 @@ require_relative './classroom'
 class Student < Person
   attr_reader :classroom
 
-  public
-
   def student(age, name, parent_permission)
     super(age, name, parent_permission)
     @classroom = classroom
