@@ -2,7 +2,7 @@
 
 # School Library
 
->The project is a school library app.  In the initial step, classes to represent students and teachers were represented. Decorator design patternis used to correct the names of people.
+>The project is a school library app.  In the initial step, classes to represent students and teachers were represented. Decorator design pattern  was used to correct the names of people. Association methos was used to link relationship between classes. 
 
 ## Built With
 
