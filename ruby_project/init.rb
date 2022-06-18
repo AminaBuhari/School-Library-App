@@ -13,5 +13,4 @@ student_one = Student.new(24, "amina", true)
 puts student_one
 
 student_one.add_student("bola")
- student_one.classroom("berry")
-
+student_one.classroom("berry")
