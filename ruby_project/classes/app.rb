@@ -42,8 +42,7 @@ class App
     if person_type == 1
       print 'Has parent permission? [Y/N]:'
       response = gets.chomp.downcase
-      parent_permission = response == 'y'
-      @people << Student.new(age, name, parent_permission)
+      @people << Student.new(age, { name: name, parent_permission: response })
     else
       print 'Specialization: '
       specialization = gets.chomp
