@@ -17,7 +17,7 @@ class Person < Nameable
     of_age? || @parent_permission
   end
 
-  private
+  public
 
   def of_age?
     @age >= 18
