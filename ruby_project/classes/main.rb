@@ -1,4 +1,5 @@
-require_relative 'app'
+#!/usr/bin/env ruby
+require_relative './app'
 
 def navigation
   puts 'Please choose an option by entering a number: '
