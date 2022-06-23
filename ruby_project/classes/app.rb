@@ -2,6 +2,8 @@ require_relative './book'
 require_relative './student'
 require_relative './teacher'
 require_relative './rentals'
+require_relative './storage'
+require 'json'
 
 class App
   attr_reader :books, :people, :rentals
@@ -20,12 +22,15 @@ class App
     book = Book.new(title, author)
     puts 'Book created successfully'
     @books << book
+    store_book
   end
 
   def list_of_book
-    @books.each do |book|
-      puts "Title: #{book.title}, Author: #{book.author} "
-    end
+    # list people before local storage
+    # @books.each do |book|
+    #   puts "Title: #{book.title}, Author: #{book.author} "
+    # end
+    load_books
   end
 
   def add_person
@@ -49,24 +54,27 @@ class App
       specialization = gets.chomp
       @people << Teacher.new(age, specialization, name)
     end
+    store_person
     puts "Person created successfully \n"
   end
 
   def list_people
-    @people.each do |person|
-      puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
-    end
-    puts
+    load_people
+    # List people without file storage
+    # @people.each do |person|
+    #   puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
+    # end
+    # puts
   end
 
   def rent_book
-    print 'select a book'
+    print 'select a book by index'
 
     @books.each_with_index do |book, index|
       puts " [#{index}] Title: #{book.title}, Author: #{book.author} "
     end
     book_index = gets.chomp.to_i
-    print 'select'
+    print 'select a person by index'
     @people.each_with_index do |person, index|
       puts "[#{index}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
     end
@@ -77,15 +85,18 @@ class App
     date = gets.chomp
 
     @rentals << Rental.new(date, @books[book_index], @people[people_index])
+    save_rentals
   end
 
   def list_rental
-    print "ID of person: \t"
-    identity = gets.chomp.to_i
-    find_person = @people.find { |each_person| each_person.id == identity }
+    load_rentals
+    # List rental without file storage
+    # print "ID of person: \t"
+    # identity = gets.chomp.to_i
+    # find_person = @people.find { |each_person| each_person.id == identity }
 
-    find_person.rentals.each do |rental|
-      puts "Date: #{rental.date}}, Book #{rental.book.title} by Author #{rental.book.author}"
-    end
+    # find_person.rentals.each do |rental|
+    #   puts "Date: #{rental.date}}, Book #{rental.book.title} by Author #{rental.book.author}"
+    # end
   end
 end

@@ -1,4 +1,4 @@
-require_relative 'app'
+require_relative './app'
 
 def navigation
   puts 'Please choose an option by entering a number: '
